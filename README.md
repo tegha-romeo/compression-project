@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # compression-project
-=======
+
 # Compression Cli  implented in Rust and Javascript (RlE and LZ77 algorithms)
 
 - A cli tool that compresses and decompreses fils **Run-Length Encoding (RLE)** and **Simplified LZ77**, written in both **Rust** and **JavaScript**.

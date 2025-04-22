@@ -6,7 +6,7 @@ use std::{env, fs, process};
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() != 5 {
+    if args.len() != 4 {
         eprintln!("Usage: compress|decompress <input> <output> --rle|--lz");
         process::exit(1);
     }

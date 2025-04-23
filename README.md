@@ -21,6 +21,8 @@
 
 > cd rust-compressor && cargo build --release
 
+## A. rust -version
+
 a) run test:  cargo test
 
 b) Build Docker images: docker build -t rust-compressor .
@@ -29,18 +31,17 @@ c) run in docker:
 
 echo "AAABBBCCC" > input.txt
 
-# A. rust -version
 
-# Compress
+## Compress
 > docker run -v .:/data rust-compressor compress /data/input.txt /data/output.rle --rle      
 
-# Decompress
+## Decompress
 > docker run -v .:/data rust-compressor decompress /data/output.rle /data/recovered.txt --rle  
 
-# Verify
+## Verify
 diff input.txt recovered.txt
 
-# B. Js Version
+## B. Js Version
 
  a) install and test:  cd js-compressor  && npm install && npx mocha test/*.test.js
 
@@ -49,13 +50,13 @@ b) build docker image: docker build -t js-compressor .
 c) run in docker 
 echo "AAABBBCCC" > input.txt
 
-# Compress
+## Compress
 > docker run -v .:/data js-compressor compress /data/input.txt /data/output.rle --rle      
 
-# Decompress
+## Decompress
 > docker run -v .:/data js-compressor decompress /data/output.rle /data/recovered.txt --rle  
 
-# Verify
+## Verify
 diff input.txt recovered.txt
 
 d) Benchmarking: chmod +x benchmark.s && ./benchmark.sh
